@@ -1,27 +1,38 @@
 document.querySelectorAll('.slider-container').forEach(slider => {
+  let shadow=document.querySelector('.shadows');
+  console.log(slider);
   let translate= 0;
   var movements=[];
   let i=0;
   let canMove=false;
-  slider.onmousedown = (evt) => {
+  shadow.onmousedown = (evt) => {
     canMove=true;
   }
-  slider.onmouseup = (evt) => {
+  shadow.onmouseup = (evt) => {
     canMove=false;
     if(slider.classList.contains('not-select')){
       slider.classList.remove('not-select');
     }
 
-    if(slider.classList.contains('grabbing')){
-      slider.classList.remove('grabbing');
+    if(shadow.classList.contains('grabbing')){
+      shadow.classList.remove('grabbing');
     }
   }
 
-  slider.onmousemove = (evtMove) => {
+  shadow.onmouseleave = () => {
+    if(canMove){
+      canMove=false;
+      if(shadow.classList.contains('grabbing')){
+        shadow.classList.remove('grabbing');
+      }
+    }
+  }
+
+  shadow.onmousemove = (evtMove) => {
     if(canMove){
       // AnimateCardX(slider.getBoundingClientRect(),evtMove.screenX);
       slider.classList.add('not-select');
-      slider.classList.add('grabbing');
+      shadow.classList.add('grabbing');
       movements[i]= evtMove.screenX;
       //console.log(evt);
       slider.style.transform= `translateX(${translate}px)`;
@@ -37,5 +48,4 @@ document.querySelectorAll('.slider-container').forEach(slider => {
       i++;
     }
   }
-  
 });

@@ -7,10 +7,11 @@ html{
   --bg-knowledge:rgb(134, 134, 134);
 
   --text-in-primary:#222;
+  --text-in-primary-t:#6e6e6e;
   --text-in-secondary:#fff;
   --text-title:#438BF6;
 
-  --title-shadow:#438bf65e;
+  --title-shadow:#438bf63f;
   --send-message: rgb(37, 218, 67);
   --send-message-border: rgb(9, 94, 23);
 }
@@ -35,6 +36,10 @@ html{
 }
 .animation-up-card{
   transform: scale(1.1) translateY(-2rem);
+}
+
+.button-animated{
+  animation: border-animation 1s ease-in-out forwards;
 }
 
 @media (max-width: 1080px) {

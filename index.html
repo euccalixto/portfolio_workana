@@ -37,20 +37,27 @@
       <div class="img">
         <img src="./assets/photo.jpg" alt="minha foto">
       </div>
-      <div class="text">
+      <section class="text">
         <h2>Sobre mim</h2>
         <p>
-          Olá, me chamo Carlos Calixto e sou <b>Dev Fullstack</b>. Codifico a mais de três anos e faço sites completos, responsivos e personalizados, desde a Ux/Ui no Figma até o front e back-end do site, tudo pensado da melhor forma para o melhor site.
+          Olá, me chamo Carlos Calixto e sou <b>Dev Fullstack
+
+          </b>. Codifico a mais de três anos e faço sites completos, responsivos e personalizados, desde a Ux/Ui no Figma até o front e back-end do site, tudo pensado da melhor forma para o melhor site.
         </p>
-      </div>
+      </section>
     </article>
 
     <article class="knowledge">
-      <div class="text">
-        <h2>Conhecimentos</h2>
+      <section class="text">
+        <h2>Habilidades</h2>
         <p>
           Ao decorrer do tempo aprendi pilares importantes para o desenvolvimento de um <b>Web Site Profissional.</b>
         </p>
+      </section>
+      <div class="shadows">
+        <div class="sw-left">
+
+        </div>
       </div>
       <div class="carousel">
         <div class="boxes slider-container">
@@ -66,6 +73,9 @@
                 Faço artes, edições de vídeo para os web sites desenvolvidos.
               </p>
             </div>
+            <span>
+              Techs: Photoshop e Sony Vegas
+            </span>
           </div>
           <div class="box two">
             <div class="img">
@@ -79,6 +89,9 @@
                 Desenvolvo websites rápidos, bonitos e seguros.
               </p>
             </div>
+            <span>
+              Techs: HTML5, CSS3, JS, AJAX, PHP e MYSQL
+            </span>
           </div>
           <div class="box three">
             <div class="img">
@@ -92,6 +105,9 @@
                 Planejo o copywriting, psicologia das cores e gatilhos mentais dos websites que faço.
               </p>
             </div>
+            <span>
+              Techs: Plataformas e Conhecimentos próprios
+            </span>
           </div>
 
           <div class="box four">
@@ -103,27 +119,33 @@
                 Ui/Ux
               </h3>
               <p>
-                Desenho e projeto as telas do site pensando no estilo e na personalização.
+                Desenho e projeto as telas do site pensando no estilo da marca e na personalização.
               </p>
             </div>
+            <span>
+              Techs: Figma
+            </span>
           </div>
         </div>
-        
       </div> 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+     
     </article>
   </main>
+  <script>
+    
+    const height_section=  document.querySelector('.knowledge section.text').getBoundingClientRect().height;
+    const height_box= document.querySelectorAll('.box')[0].getBoundingClientRect().height;
+    const height_carousel=document.querySelector('.carousel').getBoundingClientRect().height ;
+    console.log(height_section);
+    document.querySelector('.shadows').setAttribute(
+      'style',
+      `
+        height:calc(${height_box}px ); 
+        margin-top:calc(${height_section}px + 6.8rem);
+      `
+    );
+    
+  </script>
   <script src="./js/animations/animate_card.js"></script>
   <script src="./js/logic/slider_touch.js"></script>
   <script src="./js/animations/writing.js"></script>

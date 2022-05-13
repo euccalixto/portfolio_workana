@@ -236,31 +236,31 @@ article.about-me p{
 }
 
 article.knowledge{
-
   width: 100%;
+  padding-bottom: 2rem;
 
   background-color: var(--secondary);
 
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+  position: relative;
   
 }
 
-article.knowledge > .text{
+article.knowledge > section.text{
   max-width: 80%;
   margin-top: 2.8rem;
 }
 
-article.knowledge > .text h2{
+article.knowledge > section.text h2{
   color: var(--text-title);
-  text-shadow: 1px 1px 10px var(--title-shadow);
+  text-shadow: 1px 1px 8px var(--title-shadow);
   margin: 3rem 0 0.3rem 0;
   text-align: center;
 }
 
-article.knowledge > .text p{
+article.knowledge > section.text p{
   color: var(--primary);
   font-size: 1.3rem;
   margin: 0 auto;
@@ -270,31 +270,81 @@ article.knowledge > .text p{
 
 article.knowledge .carousel{
   margin-top: 3rem;
+  width: 95%;
   max-width: 100%;
-  position: relative;
 
   display: flex;
   justify-content: flex-start;
   overflow-x: auto;
   scrollbar-color: var(--text-title) transparent ;
   scrollbar-width: thin;
+  position: relative;
+ 
 }
+
 
 article.knowledge .carousel > .boxes{
   justify-content: flex-start;
   align-items: center;
   display: flex;
+  position: relative;
   
   cursor: grab;
   /* overflow-x: auto; */
   gap: 2rem;
-
+ 
   transform: translateX(0);
   transition: transform 50ms ease-in-out;
 }
 
+article.knowledge .shadows{
+  position: absolute;
+  top: 0;
+  width: 95%;
+  overflow: hidden;
+  max-width: 95%;
+  background-color: #555;
+  background: none;
+  z-index: 100;
+  cursor: grab;
+}
+article.knowledge .shadows .sw-left{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+}
+article.knowledge .shadows .sw-left:after{
+  content: "";
 
+  width: 2rem;
+  margin-left: -2rem;
+  height: 100%;
+  margin-top: -1rem;
+  height: calc(100% + 1rem);
 
+  left: 0;
+  position: absolute;
+
+  background-color: transparent;
+  box-shadow: 0px 0px 30px var(--secondary);
+}
+
+article.knowledge .shadows .sw-left:before{
+  content: "";
+
+  width: 2rem;
+  height: 100%;
+  margin-left: 100%;
+  margin-top: -1rem;
+  height: calc(100% + 1rem);
+
+  position: absolute;
+  left: 0;
+
+  box-shadow: 0px 0px 30px var(--secondary);
+  background-color: transparent;
+}
 
 
 article.knowledge .carousel::-webkit-scrollbar {
@@ -317,6 +367,7 @@ article.knowledge .carousel::-webkit-scrollbar-thumb {
 
 
 article.knowledge .carousel .boxes .box{
+  margin-top: 1rem;
   width: 20rem;
   min-width: 20rem;
   height: 28rem;
@@ -327,15 +378,15 @@ article.knowledge .carousel .boxes .box{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   gap: 1rem;
 
   background-color: var(--primary);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.295);
-  
 }
 article.knowledge .carousel .boxes .box:first-child{
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
 }
 
 article.knowledge .carousel .boxes .box.two{
@@ -412,8 +463,26 @@ article.knowledge .carousel .boxes .box .box-text button:hover {
   transform: scale(1.1);
 }
 
-.button-animated{
-  animation: border-animation 1s ease-in-out forwards;
+
+article.knowledge .carousel .boxes .box span{
+  position: absolute;
+  bottom: 0;
+  right: auto;
+  left: auto;
+  
+  padding: 2rem;
+  font-size: 0.9rem;
+  max-width: 100%;
+
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+
+  color: var(--text-in-primary-t);
+
+  
+
 }
 
 
