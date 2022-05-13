@@ -1,10 +1,12 @@
 html{
   --primary: #fff;
   --secondary: #333;
+  --secondary-op: rgba(51, 51, 51, 0.39);
   
 
   --bg-landing:rgba(51, 51, 51, 0.970);
   --bg-knowledge:rgb(134, 134, 134);
+  --bg-blue-transp:#438bf6c2;
 
   --text-in-primary:#222;
   --text-in-primary-t:#6e6e6e;
@@ -12,6 +14,7 @@ html{
   --text-title:#438BF6;
 
   --title-shadow:#438bf63f;
+  --title-shadow-bck:#00000015;
   --send-message: rgb(37, 218, 67);
   --send-message-border: rgb(9, 94, 23);
 }
@@ -39,7 +42,7 @@ html{
 }
 
 .button-animated{
-  animation: border-animation 1s ease-in-out forwards;
+  animation: border-animation 800ms ease-in-out forwards;
 }
 
 @media (max-width: 1080px) {
