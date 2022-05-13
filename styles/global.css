@@ -1,0 +1,50 @@
+html{
+  --primary: #fff;
+  --secondary: #333;
+  
+
+  --bg-landing:rgba(51, 51, 51, 0.970);
+  --bg-knowledge:rgb(134, 134, 134);
+
+  --text-in-primary:#222;
+  --text-in-secondary:#fff;
+  --text-title:#438BF6;
+
+  --title-shadow:#438bf65e;
+  --send-message: rgb(37, 218, 67);
+  --send-message-border: rgb(9, 94, 23);
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.not-select{
+  -webkit-touch-callout: none;  /* iPhone OS, Safari */
+  -webkit-user-select: none;    /* Chrome, Safari 3 */
+  -khtml-user-select: none;     /* Safari 2 */
+  -moz-user-select: none;       /* Firefox */
+  -ms-user-select: none; 
+}
+
+.grabbing{
+  cursor: grabbing !important;
+}
+.animation-up-card{
+  transform: scale(1.1) translateY(-2rem);
+}
+
+@media (max-width: 1080px) {
+  html {
+      font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+      font-size: 87.5%;
+  }
+}
