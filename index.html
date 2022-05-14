@@ -11,6 +11,7 @@
   <title>Doc</title>
 </head>
 <body>
+  <div id="boxes"></div>
   <main>
     <article class="landing-page">
       <div class="bg">
@@ -137,7 +138,7 @@
       </section>
 
       <div class="projects">
-        <div onclick="OpenProject(0)" class="project">
+        <div onclick="OpenProject('shods')" class="project">
           <div class="pop">
             <span>Clique para ver mais...</span>
           </div>
@@ -147,7 +148,7 @@
           </div>
         </div>
 
-        <div class="project">
+        <div onclick="OpenProject('cors-site')" class="project">
           <div class="pop">
             <span>Clique para ver mais...</span>
           </div>
@@ -159,7 +160,36 @@
     </article>
   </main>
   <script>
-    
+    //Select Project of portfolio
+    const projects = {
+      "shods": "oi",
+      "cors-site": "tchau"
+    }
+    function OpenProject(projectName){
+      const project= projects[projectName];
+      document.querySelector('#boxes').innerHTML = `
+        <div id="pop-up">
+          <button onclick="CloseProject()">fechar</button>
+          <div class="project-oppened">
+            ${project}
+          </div>
+        </div>
+      `;
+    }
+
+    function CloseProject(){
+      const pop= document.querySelector('#pop-up');
+      const div= document.querySelector('#boxes');
+      const children= document.querySelector('#pop-up div');
+      pop.setAttribute('style', 'transform:rotate(90deg) scale(0); border-radius:100%;');
+      pop.ontransitionend = () => {
+        pop.remove();
+      }
+
+    }
+
+
+    //Put shadow in carousel
     const height_section=  document.querySelector('.skills section.text').getBoundingClientRect().height;
     const height_box= document.querySelectorAll('.box')[0].getBoundingClientRect().height;
     const height_carousel=document.querySelector('.carousel').getBoundingClientRect().height ;

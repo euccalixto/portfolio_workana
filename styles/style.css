@@ -565,7 +565,7 @@ article.portfolio .projects .project .img{
   z-index: 1;
   background-size: auto;
   background-repeat: no-repeat;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.082);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.062);
   border-radius: 0.2rem;
 }
 
