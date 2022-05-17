@@ -27,7 +27,7 @@
         </div>
         <div class="copy">
           <h1>Carlos Calixto</h1>
-          <p>Em busca do melhor para os melhores</p>
+          <p>Desenvolvedor de Sites Freelancer </p>
           <div class="btn">
           </div>
         </div>
@@ -41,9 +41,7 @@
       <section class="text">
         <h2>Sobre mim</h2>
         <p>
-          Olá, me chamo Carlos Calixto e sou <b>Dev Fullstack
-
-          </b>. Codifico a mais de três anos e faço sites completos, responsivos e personalizados, desde a Ux/Ui no Figma até o front e back-end do site, tudo pensado da melhor forma para o melhor site.
+          Olá, me chamo Carlos Calixto, sou <b>Freelancer</b> e codifico websites a mais de três anos. Completos, responsivos e personalizados, desde a Ux/Ui no Figma até o front e back-end do website, tudo pensado da melhor forma para o melhor site.
         </p>
       </section>
     </article>
@@ -134,7 +132,7 @@
     <article class="portfolio">
       <section class="text">
         <h2>Portfólio</h2>
-        <p>Clique em um projeto para ver mais sobre ele...</p>
+        <p>Meu portfólio, clique em um projeto para ver mais sobre ele...</p>
       </section>
 
       <div class="projects">
@@ -158,36 +156,216 @@
         </div>
       </div>
     </article>
+    <footer>
+      <div class="networks">
+        <a title="Começar conversa" target="_blank" href="https://api.whatsapp.com/send?phone=5516974046412">
+          <img src="./assets/whatsapp.svg" alt="ícone do Whatsapp">
+        </a>
+        <a title="Ver github" target="_blank" href="https://github.com/euccalixto">
+          <img src="./assets/github.svg" alt="ícone do Github">
+        </a>
+      </div>
+      <p title="Meu email">carlosedu.calixto2@gmail.com</p>
+      <p class="name">Carlos Calixto</p>
+      
+    </footer>
   </main>
   <script>
     //Select Project of portfolio
     const projects = {
-      "shods": "oi",
-      "cors-site": "tchau"
+      "shods": {
+        title:'Projeto Shods',
+        type:'projeto acadêmico',
+        description:'O Shods foi um projeto com fins acadêmicos desenvolvido no meu segundo ano cursando Desenvolvimento de Sistemas, foi realizado em grupo e sua proposta era de ser um sistema web para vendas com layout bonito, dinâmico e fácil de usar',
+        techs:'HTML5, CSS3, JS, AJAX, PHP e MYSQL',
+        area:'Front-End',
+        bg_img:{
+          'desktop':'',
+          'mobile':'',
+          'box': ''
+        },
+        img_desktop:[
+          {
+            src:'./assets/shods/landing.png',
+            alt:'imagem da landing page', 
+          },
+          {
+            src:'./assets/shods/home.png',
+            alt:'imagem da página inicial', 
+          },
+          {
+            src:'./assets/shods/edit.png',
+            alt:'imagem da landing page', 
+          }
+        ],
+        img_mobile:[],
+        img_box:[],
+      },
+      "cors-site": {
+        title:'Projeto Cors',
+        type:'projeto acadêmico',
+        description:'O Cors foi um projeto com fins acadêmicos realizado em meu terceiro ano cursando Desenvolvimento de Sistemas, foi feito em grupo e sua proposta era de ser um site de notícias contra as fake news sobre o Corona Vírus, onde os usuários podiam reportar fake news e os escritores pesquisar sobre o assunto e relatar a verdade sobre a pauta.',
+        techs:'HTML5, CSS3, JS, AJAX, PHP e MYSQL',
+        area:'Front-End',
+        bg_img:{
+          'desktop':'#c4c4c4',
+          'mobile':'#c4c4c4',
+          'box': '#c4c4c4'
+        },
+        img_desktop:[
+          {
+            src:'./assets/cors/landing.png',
+            alt:'imagem da landing page', 
+          },
+          {
+            src:'./assets/cors/home-box.png',
+            alt:'imagem da página inicial', 
+          },
+          {
+            src:'./assets/cors/admin.png',
+            alt:'imagem do painel de administração', 
+          }
+          
+        ],
+        img_mobile:[
+          {
+            src:'./assets/cors/home-responsiveness.png',
+            alt:'imagem da página inicial responsiva', 
+          },
+          {
+            src:'./assets/cors/profile.png',
+            alt:'imagem do painel de perfil responsiva', 
+          }
+        ],
+        img_box:[],
+      }
     }
     function OpenProject(projectName){
+      document.body.setAttribute('style', 'overflow: hidden;');
       const project= projects[projectName];
       document.querySelector('#boxes').innerHTML = `
-        <div id="pop-up">
-          <button onclick="CloseProject()">fechar</button>
-          <div class="project-oppened">
-            ${project}
+        <div class="projects-portfolio" id="pop-up">
+          <button class="close" onclick="CloseProject()">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+              <path d="M15.59 7L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41L15.59 7Z" fill="#fff"></path>
+            </svg>
+  
+          </button>
+          <div class="project-opened">
+            <div class="title">
+              <h2> ${project.title} </h2>
+              <span> ${project.type}  </span>
+            </div>
+
+            <div class="infos">
+              <div class="column one">
+                <div class="information description">
+                  <h3>Descrição</h3>
+                  <p> ${project.description} </p>
+                </div>
+              </div>
+              
+              <div class="column two">
+                <div class="information">
+                  <h3>Tecnologias</h3>
+                  <p> ${project.techs} </p>
+                </div>
+                <div class="information">
+                  <h3>Area de Atuação</h3>
+                  <p> ${project.area} </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery">
+              ${
+                (project.img_desktop != "") ? `
+                  <div class="dektop">
+                    <h3> Imagens Desktop </h3>
+                    <div 
+                       
+                      class="images dektop"> 
+
+                      ${project.img_desktop.map(img => {
+                        return `
+                          <img 
+                            style="
+                            ${
+                              (project.bg_img['desktop'] != '') ? 
+                                `box-shadow:0px 0px 5px #c4c4c4;` :
+                                ''
+                            }"
+                            src="${img.src}" alt="${img.alt}" 
+                          />
+                        `;
+                      })}
+                    </div>
+                  </div>
+                ` : ''
+              }
+
+              ${
+                (project.img_mobile != "") ? `
+                  <div class="mobile">
+                    <h3> Imagens Mobile </h3>
+                    <div class="images mobile"> 
+                      ${project.img_mobile.map(img => {
+                        return `
+                          <img 
+                            style="
+                            ${
+                              (project.bg_img['mobile'] != '') ? 
+                              `box-shadow:0px 0px 5px #c4c4c4;`  :
+                                ''
+                            }"
+                            src="${img.src}" alt="${img.alt}" 
+                          />
+                        `;
+                      })}
+                    </div>
+                  </div>
+                ` : ''
+              }
+
+              ${
+                (project.img_box != "") ? `
+                  <div class="box">
+                    <h3> Imagens Features </h3>
+                    <div class="images box"> 
+                      ${project.img_box.map(img => {
+                        return `
+                          <img 
+                            style="
+                            ${
+                              (project.bg_img['box'] != '') ? 
+                              `box-shadow:0px 0px 5px #c4c4c4;` :
+                                ''
+                            }"
+                            src="${img.src}" alt="${img.alt}" 
+                          />
+                        `;
+                      })}
+                    </div>
+                  </div>
+                ` : ''
+              }
+            </div> 
           </div>
         </div>
       `;
     }
 
     function CloseProject(){
+      document.body.setAttribute('style', 'overflow-y: auto;');
       const pop= document.querySelector('#pop-up');
       const div= document.querySelector('#boxes');
       const children= document.querySelector('#pop-up div');
-      pop.setAttribute('style', 'transform:rotate(90deg) scale(0); border-radius:100%;');
+      pop.setAttribute('style', 'transform:rotate(15deg) scale(0); border-radius:10%; ');
       pop.ontransitionend = () => {
         pop.remove();
       }
 
     }
-
 
     //Put shadow in carousel
     const height_section=  document.querySelector('.skills section.text').getBoundingClientRect().height;
