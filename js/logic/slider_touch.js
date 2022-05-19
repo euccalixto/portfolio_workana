@@ -32,6 +32,7 @@ document.querySelectorAll('.slider-container').forEach(slider => {
     if(canMove){
       // AnimateCardX(slider.getBoundingClientRect(),evtMove.screenX);
       slider.classList.add('not-select');
+      shadow.classList.add('not-select');
       shadow.classList.add('grabbing');
       movements[i]= evtMove.screenX;
       //console.log(evt);
@@ -39,9 +40,9 @@ document.querySelectorAll('.slider-container').forEach(slider => {
       //console.log(evtMove.screenX)
       //slider.scrollLeft = evtMove.screenX * -1;
       if(movements[i-1]<movements[i] && slider.getBoundingClientRect().left + 20 < 0){
-        translate+=10;
+        translate+=5;
       }else if(movements[i-1]>movements[i] && slider.getBoundingClientRect().right - window.innerWidth + 20 > 0){
-        translate-=10;
+        translate-=5;
       }else{
         translate+=0;
       }

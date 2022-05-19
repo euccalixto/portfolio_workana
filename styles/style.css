@@ -1,108 +1,122 @@
-@keyframes up{
-  0%{
+@keyframes up {
+  0% {
     transform: translateY(0rem);
   }
-  50%{
+
+  50% {
     transform: translateY(-1rem);
   }
-  100%{
+
+  100% {
     transform: translateY(0rem);
   }
 }
 
-@keyframes down{
-  0%{
+@keyframes down {
+  0% {
     transform: translateY(0rem);
   }
-  50%{
+
+  50% {
     transform: translateY(0.5rem);
   }
-  100%{
+
+  100% {
     transform: translateY(0rem);
   }
 }
 
-@keyframes coming-opacity{
-  0%{
+@keyframes coming-opacity {
+  0% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes coming-opacity-2{
-  0%{
+@keyframes coming-opacity-2 {
+  0% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 0.5;
   }
 }
 
-@keyframes coming-up{
-  0%{
+@keyframes coming-up {
+  0% {
     transform: translateY(-5rem);
   }
-  100%{
+
+  100% {
     transform: translateY(0rem);
   }
 }
 
-@keyframes coming-down{
-  0%{
+@keyframes coming-down {
+  0% {
     transform: translateY(2rem);
   }
-  100%{
+
+  100% {
     transform: translateY(0rem);
   }
 }
 
-@keyframes flashing{
-  0%{
+@keyframes flashing {
+  0% {
     opacity: 0;
   }
-  50%{
+
+  50% {
     opacity: 1;
   }
-  100%{
+
+  100% {
     opacity: 0;
   }
 }
 
-@keyframes border-animation{
-  
-  0%{
-    border-left:2px solid var(--secondary-op);
+@keyframes border-animation {
+
+  0% {
+    border-left: 2px solid var(--secondary-op);
   }
-  25%{
-    border-left:2px solid var(--secondary-op);
-    border-top:2px solid var(--secondary-op);
+
+  25% {
+    border-left: 2px solid var(--secondary-op);
+    border-top: 2px solid var(--secondary-op);
   }
-  50%{
-    border-top:2px solid var(--secondary-op);
-    border-right:2px solid var(--secondary-op);
+
+  50% {
+    border-top: 2px solid var(--secondary-op);
+    border-right: 2px solid var(--secondary-op);
   }
-  75%{
-    border-right:2px solid var(--secondary-op);
-    border-bottom:2px solid var(--secondary-op);
+
+  75% {
+    border-right: 2px solid var(--secondary-op);
+    border-bottom: 2px solid var(--secondary-op);
   }
-  100%{
+
+  100% {
     border: 2px solid transparent;
   }
 }
 
 
 
-body{
+body {
   /* overflow-x: hidden; */
 }
 
-main{
+main {
   width: 100%;
 }
 
-article.landing-page{
+article.landing-page {
   padding: 0;
   height: 110vh;
   width: 100%;
@@ -112,7 +126,7 @@ article.landing-page{
   background-size: cover;
 }
 
-article.landing-page .bg{
+article.landing-page .bg {
   background-color: var(--bg-landing);
 
   width: 100%;
@@ -125,17 +139,17 @@ article.landing-page .bg{
   gap: 1rem;
 }
 
-article.landing-page .img{
+article.landing-page .img {
   background-color: var(--primary);
   border-radius: 100%;
   padding: 1.1rem;
   border: 2px solid #222;
   opacity: 0;
-  animation:  coming-opacity 500ms ease-in-out forwards 200ms;
+  animation: coming-opacity 500ms ease-in-out forwards 200ms;
 }
 
 
-article.landing-page .img svg{
+article.landing-page .img svg {
   height: 10rem;
   border-radius: 100%;
 }
@@ -145,53 +159,53 @@ article.landing-page .copy {
   color: var(--primary);
 }
 
-article.landing-page .copy h1{
+article.landing-page .copy h1 {
   font-family: sans-serif;
   font-size: 5rem;
   font-weight: bold;
   margin-bottom: 0.7rem;
-  animation:  coming-up 1s ease-in-out forwards, coming-opacity 1s ease-in-out forwards;
+  animation: coming-up 1s ease-in-out forwards, coming-opacity 1s ease-in-out forwards;
   transform: translateY(-5rem);
   opacity: 0;
 }
 
-article.landing-page .copy p{
+article.landing-page .copy p {
   font-family: sans-serif;
   font-size: 1.7rem;
   font-weight: normal;
-  animation:  coming-down 1s ease-in-out forwards, coming-opacity 800ms ease-in-out forwards 200ms;
+  animation: coming-down 1s ease-in-out forwards, coming-opacity 800ms ease-in-out forwards 200ms;
   opacity: 0;
   transform: translateY(2rem);
 }
 
-article.landing-page .copy p::after{
+article.landing-page .copy p::after {
   content: "|";
   animation: flashing 800ms ease-in-out infinite;
   margin-left: 0.1rem;
 }
 
-article.landing-page .copy .btn{
+article.landing-page .copy .btn {
   position: absolute;
   right: 50%;
   top: calc(100% + 2rem);
 }
 
-article.landing-page .copy .btn svg{
+article.landing-page .copy .btn svg {
   height: 3rem;
   width: 3rem;
   opacity: 0;
   animation: coming-opacity-2 500ms ease-in-out forwards, down 1500ms ease-in-out infinite;
 }
 
-article section.text{
+article section.text {
   font-family: sans-serif;
 }
 
-article section.text h2{
+article section.text h2 {
   font-size: 3rem;
 }
 
-article section.text p{
+article section.text p {
   font-size: 1.3rem;
 }
 
@@ -207,7 +221,7 @@ article.about-me {
   flex: 1;
 }
 
-article.about-me .img{
+article.about-me .img {
   padding: 2rem;
   background-color: var(--secondary);
   border-radius: 50%;
@@ -216,14 +230,14 @@ article.about-me .img{
   margin-left: 2rem;
 }
 
-article.about-me .img img{
+article.about-me .img img {
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
   box-shadow: 0 0 20px #000;
 }
 
-article.about-me .text{
+article.about-me .text {
   padding: 2rem;
   margin-left: 2rem;
   color: var(--secondary);
@@ -233,15 +247,15 @@ article.about-me .text{
 }
 
 
-article.about-me h2{
+article.about-me h2 {
   font-size: 3rem;
 }
 
-article.about-me .text p{
+article.about-me .text p {
   font-size: 1.5rem;
 }
 
-article.skills{
+article.skills {
   width: 100%;
   padding-bottom: 5rem;
 
@@ -251,22 +265,22 @@ article.skills{
   flex-direction: column;
   align-items: center;
   position: relative;
-  
+
 }
 
-article.skills > section.text{
+article.skills>section.text {
   max-width: 80%;
   margin-top: 2.8rem;
 }
 
-article.skills > section.text h2{
+article.skills>section.text h2 {
   color: var(--text-title);
   text-shadow: 1px 1px 8px var(--title-shadow);
   margin: 3rem 0 0.3rem 0;
   text-align: center;
 }
 
-article.skills > section.text p{
+article.skills>section.text p {
   color: var(--primary);
   font-size: 1.3rem;
   margin: 0 auto;
@@ -274,7 +288,7 @@ article.skills > section.text p{
   max-width: 80%;
 }
 
-article.skills .carousel{
+article.skills .carousel {
   margin-top: 3rem;
   width: 95%;
   max-width: 100%;
@@ -282,28 +296,28 @@ article.skills .carousel{
   display: flex;
   justify-content: flex-start;
   overflow-x: auto;
-  scrollbar-color: var(--text-title) transparent ;
+  scrollbar-color: var(--text-title) transparent;
   scrollbar-width: thin;
   position: relative;
- 
+
 }
 
 
-article.skills .carousel > .boxes{
+article.skills .carousel>.boxes {
   justify-content: flex-start;
   align-items: center;
   display: flex;
   position: relative;
-  
+
   cursor: grab;
   /* overflow-x: auto; */
   gap: 2rem;
- 
+
   transform: translateX(0);
   transition: transform 50ms ease-in-out;
 }
 
-article.skills .shadows{
+article.skills .shadows {
   position: absolute;
   top: 0;
   width: 95%;
@@ -314,13 +328,15 @@ article.skills .shadows{
   z-index: 100;
   cursor: grab;
 }
-article.skills .shadows .sw-left{
+
+article.skills .shadows .sw-left {
   width: 100%;
   height: 100%;
   position: relative;
   background-color: transparent;
 }
-article.skills .shadows .sw-left:after{
+
+article.skills .shadows .sw-left:after {
   content: "";
 
   width: 2rem;
@@ -336,7 +352,7 @@ article.skills .shadows .sw-left:after{
   box-shadow: 0px 0px 30px var(--secondary);
 }
 
-article.skills .shadows .sw-left:before{
+article.skills .shadows .sw-left:before {
   content: "";
 
   width: 2rem;
@@ -358,21 +374,21 @@ article.skills .carousel::-webkit-scrollbar {
 
 }
 
-article.skills .carousel::-webkit-scrollbar-track  {
-  background-color:transparent;
+article.skills .carousel::-webkit-scrollbar-track {
+  background-color: transparent;
   border-radius: 1rem;
   box-shadow: 0px 0px 30px #000;
 }
 
 article.skills .carousel::-webkit-scrollbar-thumb {
-  background-color:var(--text-title);
-  
+  background-color: var(--text-title);
+
   border-radius: 0.4rem;
 }
 
 
 
-article.skills .carousel .boxes .box{
+article.skills .carousel .boxes .box {
   margin-top: 1rem;
   width: 20rem;
   min-width: 20rem;
@@ -391,20 +407,21 @@ article.skills .carousel .boxes .box{
   background-color: var(--primary);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.295);
 }
-article.skills .carousel .boxes .box:first-child{
+
+article.skills .carousel .boxes .box:first-child {
   /* margin-left: 2rem; */
 }
 
-article.skills .carousel .boxes .box.two{
+article.skills .carousel .boxes .box.two {
   /* transform: translateY(-3rem);
   padding: 4rem; */
 }
 
-article.skills .carousel .boxes .box.three{
+article.skills .carousel .boxes .box.three {
   transform: translateY(0);
 }
 
-article.skills .carousel .boxes .box .img{
+article.skills .carousel .boxes .box .img {
   background-color: var(--text-title);
   border-radius: 50%;
   height: 6rem;
@@ -415,11 +432,11 @@ article.skills .carousel .boxes .box .img{
   justify-content: center;
 }
 
-article.skills .carousel .boxes .box .img img{
+article.skills .carousel .boxes .box .img img {
   height: 2rem;
 }
 
-article.skills .carousel .boxes .box .box-text{
+article.skills .carousel .boxes .box .box-text {
   width: 100%;
 
   display: flex;
@@ -427,7 +444,7 @@ article.skills .carousel .boxes .box .box-text{
   align-items: center;
 }
 
-article.skills .carousel .boxes .box .box-text h3{
+article.skills .carousel .boxes .box .box-text h3 {
   color: var(--text-in-primary);
   font-family: sans-serif;
   font-size: 1.8rem;
@@ -437,7 +454,7 @@ article.skills .carousel .boxes .box .box-text h3{
 
 }
 
-article.skills .carousel .boxes .box .box-text p{
+article.skills .carousel .boxes .box .box-text p {
   color: var(--text-in-primary);
   width: 100%;
   text-align: center;
@@ -446,7 +463,7 @@ article.skills .carousel .boxes .box .box-text p{
 }
 
 
-article.skills .carousel .boxes .box  button {
+article.skills .carousel .boxes .box button {
   margin-bottom: 1.3rem;
   padding: 0.7rem 1rem 0.7rem 1rem;
   font-size: 1.2rem;
@@ -456,11 +473,11 @@ article.skills .carousel .boxes .box  button {
   font-family: sans-serif;
   color: #fff;
   font-weight: 600;
- 
+
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.041);
-  background-color:var(--send-message);
+  background-color: var(--send-message);
   border: 1px dotted transparent;
-  
+
   cursor: pointer;
   transition: transform 300ms ease-in-out;
 }
@@ -470,12 +487,12 @@ article.skills .carousel .boxes .box .box-text button:hover {
 }
 
 
-article.skills .carousel .boxes .box span{
+article.skills .carousel .boxes .box span {
   position: absolute;
   bottom: 0;
   right: auto;
   left: auto;
-  
+
   padding: 2rem;
   font-size: 0.9rem;
   max-width: 100%;
@@ -494,18 +511,18 @@ article.portfolio {
   width: 100%;
 }
 
-article.portfolio > section.text{
+article.portfolio>section.text {
   margin-top: 1rem;
 }
 
-article.portfolio > section.text h2{
+article.portfolio>section.text h2 {
   color: var(--secondary);
   text-shadow: 1px 1px 8px var(--title-shadow-bck);
   margin: 3rem 0 0.3rem 0;
   text-align: center;
 }
 
-article.portfolio > section.text p{
+article.portfolio>section.text p {
   color: var(--secondary);
   font-size: 1.3rem;
   margin: 0 auto;
@@ -513,7 +530,7 @@ article.portfolio > section.text p{
   max-width: 80%;
 }
 
-article.portfolio .projects{
+article.portfolio .projects {
   margin-top: 3rem;
   width: 100%;
   display: flex;
@@ -522,7 +539,7 @@ article.portfolio .projects{
   gap: 1.2rem;
 }
 
-article.portfolio .projects .project{
+article.portfolio .projects .project {
   position: relative;
   height: 28rem;
   width: 38rem;
@@ -530,7 +547,7 @@ article.portfolio .projects .project{
   border: 2px solid transparent;
 }
 
-article.portfolio .projects .project .pop{
+article.portfolio .projects .project .pop {
   position: absolute;
   left: 0;
   top: 0;
@@ -551,18 +568,18 @@ article.portfolio .projects .project .pop{
   font-weight: 600;
 
   opacity: 0;
-  transition: opacity 200ms ease-in-out,box-shadow 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out, box-shadow 200ms ease-in-out;
   box-shadow: 0px 0px 0px var(--secondary-op);
 
 }
 
-article.portfolio .projects .project .pop:hover{
+article.portfolio .projects .project .pop:hover {
   opacity: 1;
   box-shadow: inset 0px 0px 15px var(--secondary-op);
 
 }
 
-article.portfolio .projects .project .img{
+article.portfolio .projects .project .img {
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -572,29 +589,30 @@ article.portfolio .projects .project .img{
   border-radius: 0.2rem;
 }
 
-article.portfolio .projects .project .img.shods{
+article.portfolio .projects .project .img.shods {
   background-position: center;
   background-image: url('./../assets/shods/landing.png');
 }
 
-article.portfolio .projects .project .img.cors{
+article.portfolio .projects .project .img.cors {
   background-position: left;
   background-image: url('./../assets/cors/landing.png');
 }
-.projects-portfolio{
+
+.projects-portfolio {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.projects-portfolio .project-opened{
+.projects-portfolio .project-opened {
   background-color: #fff;
 
   width: 80%;
   height: 85%;
 
   border-radius: 0.2rem;
-  
+
   overflow-y: auto;
 
   display: flex;
@@ -604,52 +622,55 @@ article.portfolio .projects .project .img.cors{
   padding: 1.8rem;
 }
 
-.projects-portfolio .project-opened .title{
+.projects-portfolio .project-opened .title {
   margin: 1.2rem 0;
   color: var(--secondary);
   font-family: sans-serif;
   text-align: center;
 }
 
-.projects-portfolio .project-opened .title h2{
+.projects-portfolio .project-opened .title h2 {
   font-size: 2.5rem;
 }
 
-.projects-portfolio .project-opened .title span{
+.projects-portfolio .project-opened .title span {
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
   margin-top: 1rem;
 }
 
-.projects-portfolio .project-opened .infos{
+.projects-portfolio .project-opened .infos {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   margin-top: 1rem;
 }
-.projects-portfolio .project-opened .infos .column{
+
+.projects-portfolio .project-opened .infos .column {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.projects-portfolio .project-opened .infos .column.one{
+.projects-portfolio .project-opened .infos .column.one {
   max-width: 50%;
 }
 
-.projects-portfolio .project-opened .infos .column .information{
+.projects-portfolio .project-opened .infos .column .information {
   color: var(--secondary);
   font-family: sans-serif;
 }
-.projects-portfolio .project-opened .infos .column .information h3{
+
+.projects-portfolio .project-opened .infos .column .information h3 {
   font-size: 1.6rem;
   margin-bottom: 0.4rem;
 }
-.projects-portfolio .project-opened .infos .column .information p{
+
+.projects-portfolio .project-opened .infos .column .information p {
   font-size: 1.3rem;
 }
 
-.projects-portfolio .project-opened .gallery{
+.projects-portfolio .project-opened .gallery {
   width: 100%;
   margin-top: 1rem;
   color: var(--secondary);
@@ -659,24 +680,25 @@ article.portfolio .projects .project .img.cors{
   gap: 1rem;
 }
 
-.projects-portfolio .project-opened .gallery h3{
+.projects-portfolio .project-opened .gallery h3 {
   font-size: 1.6rem;
   margin-bottom: 0.6rem;
 }
 
-.projects-portfolio .project-opened .gallery .images img{
+.projects-portfolio .project-opened .gallery .images img {
   height: 10rem;
   margin-bottom: 0.8rem;
 }
 
-.projects-portfolio .project-opened .gallery .images{
+.projects-portfolio .project-opened .gallery .images {
   display: flex;
   max-width: 90%;
   overflow-y: auto;
 
-  scrollbar-color: var(--text-title) transparent ;
+  scrollbar-color: var(--text-title) transparent;
   scrollbar-width: thin;
   position: relative;
+  gap: 0.3rem;
 }
 
 .projects-portfolio .project-opened .gallery .images::-webkit-scrollbar {
@@ -684,19 +706,19 @@ article.portfolio .projects .project .img.cors{
 
 }
 
-.projects-portfolio .project-opened .gallery .images::-webkit-scrollbar-track  {
-  background-color:transparent;
+.projects-portfolio .project-opened .gallery .images::-webkit-scrollbar-track {
+  background-color: transparent;
   border-radius: 1rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.295);
 }
 
 .projects-portfolio .project-opened .gallery .images::-webkit-scrollbar-thumb {
   background-color: #555;
-  
+
   border-radius: 0.4rem;
 }
 
-footer{
+footer {
   min-height: 30vh;
   margin-top: 4rem;
   background-color: var(--secondary);
@@ -706,13 +728,14 @@ footer{
   align-items: center;
 }
 
-footer .networks{
+footer .networks {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-footer a{
+
+footer a {
   padding: 0.5rem;
   background-color: #fff;
   border-radius: 100%;
@@ -722,23 +745,313 @@ footer a{
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.137);
 
 }
-footer img{
-  height: 1.9rem;
-  width: 1.9rem; 
+
+footer img {
+  height: 1.3rem;
+  width: 1.3rem;
 }
 
-footer p{
+footer p {
   font-family: sans-serif;
   font-size: 1.1rem;
   margin-top: 1rem;
   color: #fff;
 }
 
-footer p.name{
+footer p.name {
   margin-top: 0.5rem;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
 }
 
+@media (max-width:500px) {
+  article.landing-page .bg {
+    flex-direction: column;
+  }
+  article.landing-page .img {
+    padding: 0.8rem;
+  }
+
+  article.landing-page .img svg {
+    height: 8rem;
+    border-radius: 100%;
+  }
+
+  article.landing-page .copy h1 {
+    font-size: 4rem;
+  }
+
+  article.landing-page .copy .btn {
+    right: calc(50% - 2rem);
+  }
+
+
+  article section.text {
+    font-family: sans-serif;
+  }
+
+  article section.text h2 {
+    font-size: 3rem;
+  }
+
+  article section.text p {
+    font-size: 1.3rem;
+  }
+
+  article.about-me {
+    width: 100%;
+    display: flex;
+    min-height: 80vh;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  article.about-me .img {
+    margin-left: 0;
+  }
+
+  article.about-me .text {
+    padding: 0rem 1rem 4rem 1rem;
+    margin-left: 0;
+    max-width: 90%;
+  }
+
+
+  article.about-me h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  article.about-me .text p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0.7rem;
+  }
+
+  article.skills {
+    width: 100%;
+    padding-bottom: 5rem;
+
+    background-color: var(--secondary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+  }
+
+  article.skills>section.text {
+    max-width: 80%;
+    margin-top: 2.8rem;
+  }
+
+  article.skills>section.text h2 {
+    color: var(--text-title);
+    text-shadow: 1px 1px 8px var(--title-shadow);
+    margin: 3rem 0 0.3rem 0;
+    text-align: center;
+  }
+
+  article.skills>section.text p {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 80%;
+  }
+
+  article.skills .carousel {
+    margin-top: 3rem;
+    width: 95%;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-color: var(--text-title) transparent;
+    scrollbar-width: thin;
+    position: relative;
+
+  }
+
+
+  article.skills .carousel>.boxes {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    cursor: grab;
+    /* overflow-x: auto; */
+    gap: 2rem;
+
+    transform: translateX(0);
+    transition: transform 50ms ease-in-out;
+  }
+
+  article.skills .shadows {
+    position: absolute;
+    top: 0;
+    width: 95%;
+    overflow: hidden;
+    max-width: 95%;
+    background-color: #555;
+    background: none;
+    z-index: 100;
+    cursor: grab;
+  }
+
+  article.skills .shadows .sw-left {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+  }
+
+  article.skills .shadows .sw-left:after {
+    content: "";
+
+    width: 2rem;
+    margin-left: -2rem;
+    height: 100%;
+    margin-top: -1rem;
+    height: calc(100% + 1rem);
+
+    left: 0;
+    position: absolute;
+
+    background-color: transparent;
+    box-shadow: 0px 0px 30px var(--secondary);
+  }
+
+  article.skills .shadows .sw-left:before {
+    content: "";
+
+    width: 2rem;
+    height: 100%;
+    margin-left: 100%;
+    margin-top: -1rem;
+    height: calc(100% + 1rem);
+
+    position: absolute;
+    left: 0;
+
+    box-shadow: 0px 0px 30px var(--secondary);
+    background-color: transparent;
+  }
+
+
+  article.skills .carousel::-webkit-scrollbar {
+    height: 0.5rem;
+
+  }
+
+  article.skills .carousel::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px #000;
+  }
+
+  article.skills .carousel::-webkit-scrollbar-thumb {
+    background-color: var(--text-title);
+
+    border-radius: 0.4rem;
+  }
 
 
 
+  article.skills .carousel .boxes .box {
+    margin-top: 1rem;
+    width: 15rem;
+    min-width: 15rem;
+    height: 23rem;
+  }
+
+  article.skills .carousel .boxes .box .img img {
+    height: 2.5rem;
+  }
+
+
+  article.portfolio .projects {
+    margin-top: 2rem;
+    gap: 1.2rem;
+  }
+
+  article.portfolio .projects .project {
+    height: 23rem;
+    width: 33rem;
+  }
+
+  .projects-portfolio .project-opened{
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .projects-portfolio .project-opened .title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.8rem 0;
+    margin-top: 2rem;
+  }
+
+  .projects-portfolio .project-opened .title h2{
+    text-align: left;
+    font-size: 2.5rem;
+  }
+
+  .projects-portfolio .project-opened .title span{
+    text-align: left;
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-title);
+  }
+
+  .projects-portfolio .project-opened .infos {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
+  .projects-portfolio .project-opened .infos .column.one {
+    max-width: 100%;
+    margin-bottom: -1rem;
+  }
+
+
+  .projects-portfolio .project-opened .infos .column .information h3 {
+    font-size: 1.8rem;
+  }
+
+  .projects-portfolio .project-opened .infos .column .information p {
+    font-size: 1.4rem;
+  }
+
+
+  .projects-portfolio .project-opened .gallery h3 {
+    font-size: 1.8rem;
+  }
+
+  .projects-portfolio .project-opened .gallery .images img {
+    height: 15rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .projects-portfolio .project-opened .gallery .images {
+    max-width: 100%;
+  }
+
+  footer img {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+
+  footer p {
+    font-size: 1.3rem;
+  }
+}
