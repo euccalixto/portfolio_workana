@@ -176,6 +176,7 @@ article.landing-page .copy p {
   animation: coming-down 1s ease-in-out forwards, coming-opacity 800ms ease-in-out forwards 200ms;
   opacity: 0;
   transform: translateY(2rem);
+  margin-left: 0.8rem;
 }
 
 article.landing-page .copy p::after {
