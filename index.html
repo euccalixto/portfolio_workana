@@ -259,12 +259,18 @@
     }
     function OpenProject(projectName){
       document.body.setAttribute('style', 'overflow: hidden;');
+      let fill;
+      if(document.querySelector('body').getBoundingClientRect().width <= 700){
+        fill= '#222';
+      }else{
+        fill= '#fff';
+      }
       const project= projects[projectName];
       document.querySelector('#boxes').innerHTML = `
         <div class="projects-portfolio" id="pop-up">
           <button class="close" onclick="CloseProject()">
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
-              <path d="M15.59 7L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41L15.59 7Z" fill="#fff"></path>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="${fill}">
+              <path d="M15.59 7L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41L15.59 7Z" fill="${fill}"></path>
             </svg>
   
           </button>
