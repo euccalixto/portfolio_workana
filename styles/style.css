@@ -328,6 +328,7 @@ article.skills .shadows {
   background: none;
   z-index: 100;
   cursor: grab;
+  height: 100%;
 }
 
 article.skills .shadows .sw-left {
@@ -765,6 +766,18 @@ footer p.name {
   /* font-size: 1.3rem; */
 }
 
+
+
+@media (max-width:1000px) {
+  article.skills .shadows {
+    display: none;
+  }
+
+  article.skills .carousel .boxes{
+    cursor: auto;
+  }
+}
+
 @media (max-width:700px) {
   article.landing-page .bg {
     flex-direction: column;
@@ -869,111 +882,10 @@ footer p.name {
     max-width: 80%;
   }
 
-  article.skills .carousel {
-    margin-top: 3rem;
-    width: 95%;
-    max-width: 100%;
-
-    display: flex;
-    justify-content: flex-start;
-    overflow-x: auto;
-    scrollbar-color: var(--text-title) transparent;
-    scrollbar-width: thin;
-    position: relative;
-
-  }
-
-
-  article.skills .carousel>.boxes {
-    justify-content: flex-start;
-    align-items: center;
-    display: flex;
-    position: relative;
-
-    cursor: grab;
-    /* overflow-x: auto; */
-    gap: 2rem;
-
-    transform: translateX(0);
-    transition: transform 50ms ease-in-out;
-  }
-
-  article.skills .shadows {
-    position: absolute;
-    top: 0;
-    width: 95%;
-    overflow: hidden;
-    max-width: 95%;
-    background-color: #555;
-    background: none;
-    z-index: 100;
-    cursor: grab;
-    display: none;
-  }
-
-  article.skills .shadows .sw-left {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: transparent;
-  }
-
-  article.skills .shadows .sw-left:after {
-    content: "";
-
-    width: 2rem;
-    margin-left: -2rem;
-    height: 100%;
-    margin-top: -1rem;
-    height: calc(100% + 1rem);
-
-    left: 0;
-    position: absolute;
-
-    background-color: transparent;
-    box-shadow: 0px 0px 30px var(--secondary);
-  }
-
-  article.skills .shadows .sw-left:before {
-    content: "";
-
-    width: 2rem;
-    height: 100%;
-    margin-left: 100%;
-    margin-top: -1rem;
-    height: calc(100% + 1rem);
-
-    position: absolute;
-    left: 0;
-
-    box-shadow: 0px 0px 30px var(--secondary);
-    background-color: transparent;
-  }
-
-
-  article.skills .carousel::-webkit-scrollbar {
-    height: 0.5rem;
-
-  }
-
-  article.skills .carousel::-webkit-scrollbar-track {
-    background-color: transparent;
-    border-radius: 1rem;
-    box-shadow: 0px 0px 30px #000;
-  }
-
-  article.skills .carousel::-webkit-scrollbar-thumb {
-    background-color: var(--text-title);
-
-    border-radius: 0.4rem;
-  }
-
-
-
   article.skills .carousel .boxes .box {
     margin-top: 1rem;
-    width: 15rem;
-    min-width: 15rem;
+    width: 18rem;
+    min-width: 18rem;
     height: 23rem;
   }
 
@@ -1062,7 +974,6 @@ footer p.name {
   }
 }
 
-
 @media (max-width:500px) {
 
   article.landing-page .copy{
@@ -1075,6 +986,9 @@ footer p.name {
   article.landing-page .copy p{
     text-align: center;
     font-size: 1.7rem;
+  }
+  article.landing-page .copy .btn {
+    right: calc(50% - 1.6rem);
   }
 
 
@@ -1119,3 +1033,8 @@ footer p.name {
     width: 23rem;
   }
 }
+
+
+
+
+

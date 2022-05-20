@@ -32,18 +32,18 @@ document.querySelectorAll('.slider-container').forEach(slider => {
   }
 
   //mobile
-  shadow.ontouchstart = (evt) => {
-    canMove=true;
-  }
-  shadow.ontouchend = (evt) => {
-    stopMove(slider);
-  }
-  shadow.ontouchcancel = (evt) => {
-    stopMove(slider);
-  }
-  shadow.ontouchmove = (evtMove) => {
-    Move(slider,evtMove,0.1,false);
-  }
+  // shadow.ontouchstart = (evt) => {
+  //   canMove=true;
+  // }
+  // shadow.ontouchend = (evt) => {
+  //   stopMove(slider);
+  // }
+  // shadow.ontouchcancel = (evt) => {
+  //   stopMove(slider);
+  // }
+  // shadow.ontouchmove = (evtMove) => {
+  //   Move(slider,evtMove,0.1,false);
+  // }
 });
 
 
