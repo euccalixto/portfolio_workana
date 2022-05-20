@@ -722,7 +722,8 @@ article.portfolio .projects .project .img.cors {
 }
 
 footer {
-  min-height: 30vh;
+  /* min-height: 30vh; */
+  padding: 1rem;
   margin-top: 4rem;
   background-color: var(--secondary);
   display: flex;

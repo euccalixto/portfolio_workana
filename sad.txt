@@ -1,0 +1,9 @@
+<div class="networks">
+        <a title="Começar conversa" target="_blank" href="https://api.whatsapp.com/send?phone=5516974046412">
+          <img src="./assets/whatsapp.svg" alt="ícone do Whatsapp">
+        </a>
+        <a title="Ver github" target="_blank" href="https://github.com/euccalixto">
+          <img src="./assets/github.svg" alt="ícone do Github">
+        </a>
+      </div>
+      <p title="Meu email">carlosedu.calixto2@gmail.com</p>
